@@ -3,7 +3,7 @@ app = "security-scan-api"
 primary_region = "fra"
 
 [build]
-  builder = "paketobuildpacks/nodejs"
+  builder = "docker"
 
 [http_service]
   internal_port = 3000
