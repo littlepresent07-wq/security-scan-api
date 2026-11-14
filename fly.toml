@@ -2,9 +2,6 @@
 app = "security-scan-api"
 primary_region = "fra"
 
-[build]
-  builder = "docker"
-
 [http_service]
   internal_port = 3000
   force_https = true
