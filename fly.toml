@@ -1,0 +1,20 @@
+# Fly.io configuration for security-scan-api
+app = "security-scan-api"
+primary_region = "fra"
+
+[build]
+  builder = "paketobuildpacks/nodejs"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+
+  [http_service.concurrency]
+    type = "requests"
+    hard_limit = 50
+    soft_limit = 30
+
+[vm]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1
